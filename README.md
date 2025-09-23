@@ -1,6 +1,6 @@
-# RPS Twist
+# RPS Twist by B11109013 黃詩雅
 
-A Rock-Paper-Scissors game with fun twists: win streak shield, AI bias, time bonus, and an Aurora-themed animated UI.
+A Rock-Paper-Scissors game with fun twists.
 
 ## Quick Start
 
@@ -36,7 +36,7 @@ npm run build && npm run preview
 
 - Your HP (green) and AI HP (red) are shown above the cards.
 - Last moves for you and the AI appear under the cards.
-- A big banner appears on win/lose; the match auto-restarts shortly after.
+- A big banner will appear when you win/lose; the match auto-restarts shortly after.
 - High Score and the number of rounds are saved locally in your browser.
 
 ## Controls
