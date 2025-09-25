@@ -2,6 +2,16 @@
 
 A Rock-Paper-Scissors game with fun twists.
 
+## Prompt
+
+I want to make a rock paper scissor game with a little twist
+- each round can deal damage, if you win you get streaks
+- after 2 win streaks you get a shield card that you can use, after you use it the card resets and you need to win again to get it back
+- the bot slightly biases against user's most common recent move
+- if user pick move within 5 seconds gain 10% more score pts
+- make levels : easy, medium, and hard mode
+- play until health bar reaches 0 and the game resets
+
 ## Quick Start
 
 Requirements: Node 18+
