@@ -21,6 +21,18 @@ Open the URL shown (usually `http://localhost:5173`).
 npm run build && npm run preview
 ```
 
+## Run the Static Build (no Node required)
+
+If you just want the plain HTML/CSS/JS to play without a dev server:
+
+- Open the folder `RPS Twist Game/` and double‑click `index.html`.
+- Or host the folder with any static server (e.g., drag into Netlify, or serve with VS Code Live Server).
+
+The file layout is:
+- `RPS Twist Game/index.html`
+- `RPS Twist Game/assets/style.css`
+- `RPS Twist Game/assets/script.js`
+
 ## How to Play
 
 - Pick one of three cards: Rock, Paper, or Scissor.
