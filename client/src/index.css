@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Aurora theme (teal/indigo with soft glow) */
+  --background: 230 35% 8%;
+  --foreground: 210 40% 98%;
+  --card: 230 35% 12%;
+  --card-foreground: 210 40% 98%;
+  --primary: 200 85% 60%; /* cyan */
+  --primary-foreground: 210 40% 98%;
+  --secondary: 260 80% 65%; /* indigo */
+  --secondary-foreground: 210 40% 98%;
+  --muted: 230 25% 16%;
+  --muted-foreground: 230 20% 75%;
+  --accent: 165 70% 45%; /* aurora green */
+  --accent-foreground: 210 40% 98%;
+  --destructive: 2 85% 60%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 230 25% 24%;
+  --input: 230 25% 22%;
+  --ring: 220 85% 65%;
+  --radius: 14px;
+  --chart-1: 190 85% 55%;
+  --chart-2: 265 70% 60%;
+  --chart-3: 165 70% 50%;
+  --chart-4: 320 70% 60%;
+  --chart-5: 45 90% 60%;
+  --sidebar-background: 230 35% 10%;
+  --sidebar-foreground: 210 40% 98%;
+  --sidebar-primary: 200 85% 60%;
+  --sidebar-primary-foreground: 210 40% 98%;
+  --sidebar-accent: 230 25% 16%;
+  --sidebar-accent-foreground: 210 40% 98%;
+  --sidebar-border: 230 25% 20%;
+  --sidebar-ring: 220 85% 65%;
+}
+
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; }
+
+/* Aurora background */
+.aurora-bg {
+  background:
+    radial-gradient(1200px 600px at 10% 10%, hsla(200,85%,60%,0.18), transparent 60%),
+    radial-gradient(900px 500px at 90% 15%, hsla(265,70%,60%,0.18), transparent 60%),
+    radial-gradient(1000px 600px at 30% 90%, hsla(165,70%,45%,0.16), transparent 60%),
+    linear-gradient(180deg, hsl(var(--background)) 0%, hsl(230 35% 6%) 100%);
+}
+
+/* Reveal polish animations */
+.card-3d { perspective: 800px; }
+.flip-in { animation: card-flip 450ms ease-out forwards; transform-origin: center; }
+@keyframes card-flip {
+  0% { transform: rotateY(90deg) scale(0.96); opacity: 0.5; }
+  100% { transform: rotateY(0deg) scale(1); opacity: 1; }
+}
+
+.swipe-in-left { animation: swipe-left 400ms cubic-bezier(.22,.61,.36,1) forwards; }
+@keyframes swipe-left {
+  0% { transform: translateX(-12px) rotate(-2deg); opacity: 0.6; }
+  100% { transform: translateX(0) rotate(0deg); opacity: 1; }
+}
+
+.swipe-in-right { animation: swipe-right 400ms cubic-bezier(.22,.61,.36,1) forwards; }
+@keyframes swipe-right {
+  0% { transform: translateX(12px) rotate(2deg); opacity: 0.6; }
+  100% { transform: translateX(0) rotate(0deg); opacity: 1; }
+}
+
+.shake-small { animation: shake 250ms linear 1; }
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  50% { transform: translateX(4px); }
+  75% { transform: translateX(-2px); }
+  100% { transform: translateX(0); }
+}
+
+.float-up { animation: float-up 700ms ease-out forwards; }
+@keyframes float-up {
+  0% { transform: translateY(8px) scale(0.92); opacity: 0; }
+  20% { opacity: 1; }
+  100% { transform: translateY(-24px) scale(1); opacity: 0; }
+}
