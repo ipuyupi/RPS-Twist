@@ -25,6 +25,20 @@ export default defineConfig({
   build: {
     outDir: path.resolve(__dirname, "dist/public"),
     emptyOutDir: true,
+    cssCodeSplit: false,
+    rollupOptions: {
+      output: {
+        entryFileNames: "assets/script.js",
+        chunkFileNames: "assets/script-[name].js",
+        assetFileNames: (assetInfo) => {
+          if (assetInfo.name && assetInfo.name.endsWith(".css")) {
+            return "assets/style.css";
+          }
+          return "assets/[name][extname]";
+        },
+        manualChunks: undefined,
+      },
+    },
   },
   // Add support for large models and audio files
   assetsInclude: ["**/*.gltf", "**/*.glb", "**/*.mp3", "**/*.ogg", "**/*.wav"],
